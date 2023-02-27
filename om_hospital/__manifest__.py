@@ -1,8 +1,8 @@
 {
-    'name': 'Hospital Management System',
+    'name': 'Kari Kari CRM',
     'author': 'Pandore & Co',
     'website': 'www.pandore.co',
-    'summary': 'Application de gestion des hopitaux',
+    'summary': 'Application de gestion de Kari Kari',
     'version': '1.0',
     'depends': ['mail'],
     'data': [
