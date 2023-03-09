@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="res_partner_contact_inherit" model="ir.ui.view">
+        <field name="name">res.partner.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+<!--            <field name="vat" position="after">-->
+<!--                <field name="prenoms"/>-->
+<!--            </field>-->
+            <field name="company_type" position="after" >
+               <div class="o_row">
+                   <field name="nom" placeholder="e.g. DANGOTE" attrs="{'required' : [('type', '=', 'contact')], 'invisible': [('is_company','=', True)]}"/>
+                 <field name="nom" placeholder="e.g. Kari Kari" attrs="{'required' : [('type', '=', 'contact')], 'invisible': [('is_company','=', False)]}"/>
+                <field name="prenoms" placeholder="e.g. Chris" attrs="{'required' : [('type', '=', 'contact')], 'invisible': [('is_company','=', True)]}"/>
+                   
+               </div>
+
+            </field>
+            <field name="category_id" position="after">
+                <field name="source_acquisition"/>
+                <field name="autre_source" attrs="{'invisible': [('source_acquisition','!=', 'autres')]}"/>
+
+            </field>
+        </field>
+    </record>
+</odoo>
